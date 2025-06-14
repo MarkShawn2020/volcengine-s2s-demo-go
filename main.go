@@ -16,8 +16,8 @@ import (
 )
 
 var (
-	appid       = "9168491271"
-	accessToken = "YOUR_API_KEY_HERE"
+	appid       = os.Getenv("VOLCENGINE_APP_ID")
+	accessToken = os.Getenv("VOLCENGINE_ACCESS_TOKEN")
 
 	wsURL    = url.URL{Scheme: "wss", Host: "openspeech.bytedance.com", Path: "/api/v3/realtime/dialogue"}
 	protocol = NewBinaryProtocol()
